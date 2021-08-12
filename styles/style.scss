@@ -1,9 +1,9 @@
 @import "_variables.scss";
 
 
- /*=================
- General
- =================*/
+/*=================
+   General
+=================*/
 
  *{
    box-sizing: border-box;
@@ -14,7 +14,130 @@
  html{
    font-size: 14px;
    font-family: $font;
+  //  background: url("../images/bg-desktop.png");
+   background-color: $Very-Dark-Blue;
+   background-size: cover;
+   background-position: top;
+   background-repeat: no-repeat;
+   color: white; 
  }
+
+ p{
+   color: $Pale-Blue;
+   opacity: 0.9;
+   span{
+     color: white;
+   }
+ }
+
+ h1{
+   position: absolute;
+   right: 5%;
+   top: 0%;
+   background-color: white;
+   color: black;
+   padding: 15px;
+   border-radius: 10px;
+   transform: translateY(-80%);
+   span{
+     font-size: 1rem;
+     color: $Grayish-Blue;
+   }
+   &::after{
+     content: '';
+     position: absolute;
+     border: 20px solid transparent;
+     border-right: 15px solid white;
+     bottom: 0;
+     right: 0%;
+     transform: translateY(50%);
+   }
+ }
+
+/*=================
+  Main Container
+ =================*/
+
+ .container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   top: 50%;
+   right: 0;
+   left: 0;
+   transform: translatey(-50%);
+ }
+
+/*=================
+  Files Container
+ =================*/
+
+ .files-container{
+   background-color: $Dark-Blue;
+   padding: 30px 80px 30px 30px;
+   border-radius: 10px 50px 10px 10px;
+   margin-right: 20px;
+ }
+
+ .files{
+   display: flex;
+   justify-content: space-evenly;
+   margin-top: 20px;
+ }
+
+ .file{
+   background-color: $Very-Dark-Blue;
+   padding: 10px;
+   margin-right: 20px;
+   border-radius: 10px;
+ }
+
+ /*=================
+  Progress Container
+ =================*/
+
+ .progress-container{
+   background-color: $Dark-Blue;
+   padding: 30px;
+   border-radius: 10px;
+   transform: translatey(17%);
+   width: 40%;
+ }
+
+ .progress-bar{
+   width: 100%;
+   height: 10px;
+   background-color: $Very-Dark-Blue;
+   border-radius: 50px;
+   margin: 10px 0;
+   &::before{
+     content: '';
+     position: absolute;
+     width: 60%;
+     height: 10px;
+     border-radius: 50px;
+     background: linear-gradient($Gradient);
+   }
+   &::after{
+     content: '';
+     position: absolute;
+     right: 35.1%;
+     top: 46.5%;
+     width: 8px;
+     height: 8px;
+     border-radius: 50px;
+     background-color: white;
+   }
+ }
+
+ .gb-left{
+   display: flex;
+   justify-content: space-between;
+ }
+
+
+
 
 /*=================
   Attribution
@@ -23,7 +146,10 @@
 .attribution {
   font-size: 11px;
   text-align: center;
-
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
   a {
     color: hsl(228, 45%, 44%);
   }
